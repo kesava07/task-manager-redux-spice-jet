@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import React, { Component } from "react";
+import { Col, Container } from "reactstrap";
+import FormCollapse from "./Components/FormCollapse";
+import TaskCards from "./Components/TaskCards";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <Container>
+        <Col lg="6" className="m-auto">
+          <FormCollapse />
+          <TaskCards />
+        </Col>
+      </Container>
+    );
+  }
 }
-
-export default App;
